@@ -52,6 +52,6 @@ client.connect((err) => {
   console.log("database connected");
 });
 
-app.listen(5000, () => {
+app.listen(process.env.PORT || 5000, () => {
   console.log("Port is running on 5000");
 });
