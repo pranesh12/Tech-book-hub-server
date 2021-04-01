@@ -14,6 +14,10 @@ const client = new MongoClient(uri, {
   useUnifiedTopology: true,
 });
 
+app.get("/", (req, res) => {
+  res.send("Hello");
+});
+
 client.connect((err) => {
   const ProductCollection = client.db("techStore").collection("products");
   const OrderCollection = client.db("techStore").collection("orders");
